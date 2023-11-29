@@ -1,2 +1,6 @@
 #!/usr/bin/python3
-echo "Compiling main.py ..." && python3 -m py_compile $PYFILE && mv __pycache__/*.pyc "$PYFILE"c  && rm -rf __pycache__
+def remove_char_at(str, n):
+    if (n > len(str) or n < 0):
+        return str
+    else:
+        return (str[:n] + str[n + 1:])
