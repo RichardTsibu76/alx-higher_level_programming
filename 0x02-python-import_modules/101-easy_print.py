@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import is_cool
+assert "#" + "python is cool"
