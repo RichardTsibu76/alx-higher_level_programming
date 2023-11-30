@@ -1,4 +1,4 @@
-#!/usr/bin/pythion3
+#!/usr/bin/python3
 from sys import argv, exit
 import calculator_1 as cal
 if __name__ == "__main__":
