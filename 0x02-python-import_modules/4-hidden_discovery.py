@@ -8,8 +8,8 @@ if __name__ == "__main__":
 
     num = len(mem)
 
-    for integer in range(0, num):
-        if mem[integer].startswith('_'):
+    for i in range(0, num):
+        if mem[i].startswith('_'):
             continue
         else:
-            print("{}".format(mem[integer]))
+            print("{}".format(mem[i]))
