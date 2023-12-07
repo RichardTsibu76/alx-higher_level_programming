@@ -1,25 +1,26 @@
-#include <stdio.h>
 #include <Python.h>
+#include <object.h>
+#include <listobject.h>
+
 /**
- * print_python_list_info - A C function that prints some
- *                         basic info about Python lists
- * @p: A PyObject to be type-cast to PyListObject
+ * print_python_list_info - function prints information
+ * about a Python list, including its size, allocated
+ * space, and the type of each element
+ * @p: points to list
+ * Return: void
  */
-
-
 void print_python_list_info(PyObject *p)
 {
-	long int i = 0;
-	PyListObject *my_list;
+	int i;
+	long int size = PyList_Size(p);
+	PyListObject *list_obj = (PyListObject *)p;
+	const char *Elm_type;
 
-	my_list = (PyListObject *)p;
-	printf("[*] Size of the Python List = %ld\n", my_list->ob_base.ob_size);
-	printf("[*] Allocated = %ld\n", my_list->allocated);
-
-	while (i < my_list->ob_base.ob_size)
+	printf("[*] Size of the Python List = %li\n", size);
+	printf("[*] Allocated = %li\n", list_obj->allocated);
+	for (i = 0; i < size; i++)
 	{
-		printf("Element %ld: %s\n", i,
-				my_list->ob_item[i]->ob_type->tp_name);
-		i++;
+		Elm_type = Py_TYPE(list_obj->ob_item[i])->tp_name;
+		printf("Element %d: %s\n", i, Elm_type);
 	}
 }
