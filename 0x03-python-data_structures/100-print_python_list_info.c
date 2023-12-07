@@ -1,26 +1,22 @@
-#include <Python.h>
-#include <object.h>
-#include <listobject.h>
+#include "lists.h"
 
 /**
- * print_python_list_info - function prints information
- * about a Python list, including its size, allocated
- * space, and the type of each element
- * @p: points to list
- * Return: void
+ * print_python_list_info - This function prints info about list in python
+ * @p: This clearly by definition a pointer to list
+ * Return: This is a void keyword and does not return
  */
 void print_python_list_info(PyObject *p)
 {
-	int i;
+	int integer_i;
 	long int size = PyList_Size(p);
 	PyListObject *list_obj = (PyListObject *)p;
 	const char *Elm_type;
 
 	printf("[*] Size of the Python List = %li\n", size);
 	printf("[*] Allocated = %li\n", list_obj->allocated);
-	for (i = 0; i < size; i++)
+	for (integer_i = 0; integer_i < size; integer_i++)
 	{
-		Elm_type = Py_TYPE(list_obj->ob_item[i])->tp_name;
-		printf("Element %d: %s\n", i, Elm_type);
+		Elm_type = Py_TYPE(list_obj->ob_item[integer_i])->tp_name;
+		printf("Element %d: %s\n", integer_i, Elm_type);
 	}
 }
