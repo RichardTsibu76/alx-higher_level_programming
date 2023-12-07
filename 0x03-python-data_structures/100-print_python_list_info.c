@@ -1,5 +1,6 @@
-#include "lists.h"
-
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
 /**
  * print_python_list_info - This function prints info about list in python
  * @p: This clearly by definition a pointer to list
