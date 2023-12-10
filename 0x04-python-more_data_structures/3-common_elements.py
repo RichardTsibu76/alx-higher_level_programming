@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def common_elements(set_1, set_2): # this is function
+# this is the main function
+def common_elements(set_1, set_2):
     return set_1 & set_2
