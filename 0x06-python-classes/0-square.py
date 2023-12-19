@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''This module in oop contains an empty class square that defines the square'''
+"""This module contains an empty class Square that defines a square"""
 
 
-class square:
-    '''This is an empty class square defines the square'''
+class Square:
+    """An empty class Square that defines a square"""
     pass
