@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-'''This class by name Square defines a square'''
+"""This is a class square that defines a square"""
 
 
 class Square:
-    '''Defines a class by size'''
+    """this defines a class by size"""
 
     def __init__(self, size=0, position=(0, 0)):
-        '''
+        """
         Initialize private instance attribute
         args:
             size (int, optional): size of square
             positon (:obj:`tuple`, optional)
-        '''
+        """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        '''Retrieves private instance attribute: size'''
+        """Retrieves private instance attribute: size"""
         return self.__size
 
     @size.setter
@@ -30,7 +30,7 @@ class Square:
 
     @property
     def position(self):
-        '''Retrieves private instance attribute: position'''
+        """Retrieves private instance attribute: position"""
         return self.__position
 
     @position.setter
@@ -47,15 +47,15 @@ class Square:
         self.__position = value
 
     def area(self):
-        '''Returns the current square area'''
+        """Returns the current square area"""
         return self.__size ** 2
 
     def my_print(self):
-        '''Prints a square with #'''
+        """Prints a square with #"""
         if self.__size == 0:
             print("")
         else:
             for _ in range(self.__position[1]):
                 print('')
-            for  _ in range(self.__size):
-                print(' ' * self.__position[0] + '#' * self.__s)
+            for _ in range(self.__size):
+                print(' ' * self.__position[0] + '#' * self.__s
