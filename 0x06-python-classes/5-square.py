@@ -5,7 +5,7 @@
 class Square:
     '''The class defines a Square'''
     def __init__(self, size=0):
-        '''The initilization method assigns size to an object created
+        '''assigning size to an object through the initializing method
         Args:
             size(int): The size of the square
         Attributes:
