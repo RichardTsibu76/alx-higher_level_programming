@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-"""This module contains a class named Rectangle
+s module contains a class named Rectangle
     which defines the height and width of rectangle
     """
 
