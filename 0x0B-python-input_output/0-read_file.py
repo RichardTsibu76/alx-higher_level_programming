@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Read a text file """
-''' file input and output '''
 
 def read_file(filename=""):
     """
