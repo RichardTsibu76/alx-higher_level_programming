@@ -8,6 +8,6 @@ def read_file(filename=""):
     Args:
         filename (str): name of file
     """
-    with open(filename) as file_object:
-        content = file_object.read()
+    with open(filename) as ob:
+        content = ob.read()
     print(content, end='')
