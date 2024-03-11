@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const CONSTVAR = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const myContainer = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-CONSTVAR.forEach((element) => {
-console.log(element);
+myContainer.forEach((element) => {
+  console.log(element);
 });
