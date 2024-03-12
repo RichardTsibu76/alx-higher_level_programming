@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-var cal = 0;
+let cal = 0;
 
 exports.logMe = function cal (item) {
   console.log(`${cal}: ${item}`);
