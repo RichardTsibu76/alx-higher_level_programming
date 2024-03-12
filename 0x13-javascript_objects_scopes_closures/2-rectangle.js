@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-// This defines a class with constructor taking two args
+//Defines a class
 class Rectangle {
   constructor (w, h) {
-    if (typeof w === 'number' && w > 0 && typeof h === 'number && h > 0') {
-      this.with = w;
+    if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
+      this.width = w;
       this.height = h;
     }
   }
