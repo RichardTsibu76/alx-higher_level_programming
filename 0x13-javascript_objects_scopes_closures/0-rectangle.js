@@ -1,6 +1,7 @@
 #!/usr/bin/node
-
-// This is an empty class by name Rectangle
+/**
+ *Represents a rectangle
+ */
 class Rectangle {}
 
 module.exports = Rectangle;
