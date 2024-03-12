@@ -10,7 +10,7 @@ async function concatTwoFiles () {
     const data2 = await fs.readFile(fileB);
     fs.writeFile(fileC, data1 + data2);
   } catch (err) {
-    console.log(err);
+    console.log(err); // This would just output the this finally
   }
 }
-concatTwoFiles();
+concatTwoFiles(); // This finally concatenation the files
