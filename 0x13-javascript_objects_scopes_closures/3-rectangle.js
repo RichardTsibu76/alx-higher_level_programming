@@ -1,5 +1,7 @@
 #!/usr/bin/node
-// Defines Retangular class
+/**
+ *Defines a class retangle
+ */
 class Rectangle {
   constructor (w, h) {
     if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
@@ -14,12 +16,11 @@ class Rectangle {
       let y = 0;
       while (y < this.width) {
         myVar += 'X';
-	y++;
+        y++;
       }
 
       console.log(myVar);
     }
   }
 }
-
 module.exports = Rectangle;
