@@ -1,5 +1,7 @@
 #!/usr/bin/node
-// Define a class
+/**
+ *Define a class
+ */
 class Rectangle {
   constructor (w, h) {
     if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
