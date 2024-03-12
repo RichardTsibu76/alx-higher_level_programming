@@ -1,22 +1,16 @@
 #!/usr/bin/node
-const fs = require('fs');
-
-const fileA = process.argv[2];
-const fileB = process.argv[3];
-const fileC = process.argv[4];
-
-if (
- fs.existsSync(fileA) &&
-fs.statSync(fileA).isFile &&
-fs.existsSync(fileB) &&
-fs.statSync(fileB).isFile &&
-fileC !== undefined
-) {
-  const fileAContent = fs.readFileSync(fileA);
-  const fileBContent = fs.readFileSync(fileB);
-  const stream = fs.createWriteStream(fileC);
-
-  stream.write(fileAContent);
-  stream.write(fileBContent);
-  stream.end();
+const fs = require('fs').promises;
+const { argv } = require('process');
+const fileA = argv[2];
+const fileB = argv[3];
+const fileC = argv[4];
+async function concatTwoFiles () {
+  try {
+    const data1 = await fs.readFile(fileA);
+    const data2 = await fs.readFile(fileB);
+    fs.writeFile(fileC, data1 + data2);
+  } catch (err) {
+    console.log(err);
+  }
 }
+concatTwoFiles();
