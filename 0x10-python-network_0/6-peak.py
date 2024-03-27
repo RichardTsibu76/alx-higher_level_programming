@@ -1,4 +1,4 @@
-#!/usr/pyhton3
+#!/usr/bin/pyhton3
 "Finding"
 
 def find_peak(list_of_integers):
