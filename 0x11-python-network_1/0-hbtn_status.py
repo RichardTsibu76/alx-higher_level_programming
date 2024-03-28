@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 # A python script that fetches https://alx-intranet.hbtn.io/status
-
 import urllib.request
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    alx = response.read().decode('utf-8')
-    print('Body response:')
-    print("\t- type:", type(alx))
-    print("\t- content:", alx)
-    print("\t- utf8 content:", alx)
+if __name__ == "__main__":
+    request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))
