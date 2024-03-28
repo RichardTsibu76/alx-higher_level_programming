@@ -16,6 +16,6 @@ if __name__ == "__main__":
         if resjson:
             print(f'[{resjson["id"]}] {resjson["name"]}')
         else:
-             print("No result")
+            print("No result")
     except Exception:
         print("Not a valid JSON")
