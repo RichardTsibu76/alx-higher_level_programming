@@ -1,1 +1,1 @@
-Solution to 0x15. JavaScript - Web jQuery
+Solution 0x15-javascript-web_jquery
